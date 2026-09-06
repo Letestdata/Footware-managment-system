@@ -181,11 +181,11 @@ Stores all employee and admin login accounts.
 Example:
 ```json
 {
-  "username": "ahmad123",
+  "username": "123",
   "password": "mypassword",
-  "name": "Ahmad Ali",
+  "name": "ABC",
   "role": "admin",
-  "email": "ahmad@nicefootwear.com",
+  "email": "ahmad@footwear.com",
   "phone": "9876543210",
   "createdAt": "2026-01-01T10:00:00Z"
 }
