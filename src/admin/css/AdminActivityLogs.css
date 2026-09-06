@@ -1,0 +1,158 @@
+@import './AdminInventory.css';
+
+.admin-timeline-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid var(--admin-outline-variant);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  padding: 32px;
+  margin-top: 24px;
+}
+
+.admin-timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-timeline-item {
+  display: flex;
+  min-height: 100px;
+}
+
+/* Time side */
+.admin-timeline-time {
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 24px;
+  padding-top: 4px;
+}
+
+.time-text {
+  font-weight: 700;
+  color: var(--admin-on-surface);
+  font-size: 0.9rem;
+}
+
+.date-text {
+  font-size: 0.75rem;
+  color: var(--admin-on-surface-variant);
+  margin-top: 4px;
+}
+
+/* Center Divider line */
+.admin-timeline-divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 2px;
+}
+
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  background-color: var(--admin-primary);
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  box-shadow: 0 0 0 1px var(--admin-outline-variant);
+  position: absolute;
+  top: 4px;
+  z-index: 2;
+}
+
+.timeline-line {
+  width: 2px;
+  height: 100%;
+  background-color: var(--admin-surface-container-high);
+  z-index: 1;
+}
+
+.admin-timeline-item:last-child .timeline-line {
+  display: none;
+}
+
+.admin-timeline-content {
+  flex: 1;
+  padding-left: 32px;
+  padding-bottom: 32px;
+}
+
+.admin-timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.admin-timeline-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.log-icon {
+  font-size: 20px;
+  color: var(--admin-on-surface-variant);
+}
+
+.admin-timeline-title h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--admin-on-surface);
+}
+
+.admin-timeline-user {
+  font-size: 0.85rem;
+  color: var(--admin-on-surface-variant);
+}
+
+.admin-timeline-user strong {
+  color: var(--admin-on-surface);
+}
+
+.admin-timeline-body p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--admin-on-surface-variant);
+  line-height: 1.5;
+  background-color: var(--admin-surface-container-low);
+  padding: 12px 16px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* Custom Badges for Logs */
+.admin-badge.primary { background-color: #e0e7ff; color: #4338ca; }
+
+/* Mobile Responsiveness for Activity Logs */
+@media (max-width: 768px) {
+  .admin-timeline-card {
+    padding: 16px;
+  }
+  
+  .admin-timeline-time {
+    width: 80px;
+    padding-right: 12px;
+  }
+  
+  .admin-timeline-content {
+    padding-left: 16px;
+    padding-bottom: 24px;
+  }
+  
+  .admin-timeline-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .admin-timeline-body p {
+    font-size: 0.85rem;
+    padding: 10px 12px;
+    word-break: break-word;
+    display: block;
+  }
+}

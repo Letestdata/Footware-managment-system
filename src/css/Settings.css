@@ -1,0 +1,126 @@
+@import './Dashbord.css';
+
+.settings-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+}
+
+.settings-card {
+  background-color: var(--surface);
+  border-radius: 12px;
+  border: 1px solid var(--outline);
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.settings-section-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.settings-section-desc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--surface-highest);
+}
+
+.profile-edit-wrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.profile-photo-edit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.large-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--surface-highest);
+}
+
+.settings-form {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.form-group input, 
+.form-group select {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--outline);
+  background-color: var(--surface-low);
+  font-family: inherit;
+  font-size: 0.875rem;
+  color: var(--text-main);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.form-group input:focus, 
+.form-group select:focus {
+  border-color: var(--primary);
+  background-color: var(--surface);
+}
+
+.toggle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--surface-highest);
+}
+.toggle-row:last-child { border-bottom: none; }
+.toggle-info h4 { font-size: 0.875rem; font-weight: 600; color: var(--text-main); margin-bottom: 2px;}
+.toggle-info p { font-size: 0.75rem; color: var(--text-muted); }
+
+.settings-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Responsive Mobile Layout */
+@media (max-width: 1024px) {
+  .settings-layout {
+    flex-direction: column;
+  }
+  .settings-profile-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .settings-form {
+    grid-template-columns: 1fr;
+  }
+}

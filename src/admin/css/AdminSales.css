@@ -1,0 +1,13 @@
+@import './AdminInventory.css';
+
+.admin-payment-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background-color: var(--admin-surface-container-high);
+  border-radius: 16px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid var(--admin-outline-variant);
+}

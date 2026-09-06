@@ -1,0 +1,85 @@
+@import './Dashbord.css';
+
+.notifications-board {
+  background-color: var(--surface);
+  border-radius: 12px;
+  border: 1px solid var(--outline);
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  max-width: 900px;
+}
+
+.notif-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--surface-highest);
+}
+
+.notif-header h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.mark-read-btn {
+  background: transparent;
+  border: none;
+  color: var(--primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.mark-read-btn:hover { text-decoration: underline; }
+
+.notif-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.notif-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--surface-highest);
+  transition: background-color 0.2s;
+}
+.notif-item:last-child { border-bottom: none; }
+.notif-item:hover { background-color: rgba(0,0,0,0.02); }
+
+.notif-item.unread { background-color: var(--surface-low); }
+
+.notif-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.notif-icon.warning { background-color: var(--orange-50); color: var(--primary-container); }
+.notif-icon.success { background-color: var(--green-50); color: var(--green-700); }
+.notif-icon.info { background-color: var(--blue-50); color: var(--blue-600); }
+.notif-icon.error { background-color: var(--error-container); color: var(--error); }
+
+.notif-content { flex: 1; }
+.notif-title { font-size: 0.95rem; font-weight: 700; color: var(--text-main); margin-bottom: 4px; }
+.notif-desc { font-size: 0.875rem; color: var(--text-muted); line-height: 1.5; }
+
+.notif-time {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.unread-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  margin-top: 5px;
+}

@@ -1,0 +1,36 @@
+@import './AdminInventory.css';
+
+/* Unique Customer Page Styling */
+.admin-customer-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-customer-avatar {
+  width: 36px;
+  height: 36px;
+  background-color: var(--admin-primary);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.admin-contact-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-email-sub {
+  font-size: 0.75rem;
+  color: var(--admin-on-surface-variant);
+  margin-top: 2px;
+}
+
+.text-green {
+  color: #10b981 !important;
+}

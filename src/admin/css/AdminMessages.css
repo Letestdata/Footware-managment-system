@@ -1,0 +1,212 @@
+@import './AdminInventory.css';
+
+.admin-messages-layout {
+  display: flex;
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid var(--admin-outline-variant);
+  overflow: hidden;
+  min-height: 500px;
+}
+
+/* Left Panel */
+.admin-inbox-panel {
+  width: 350px;
+  border-right: 1px solid var(--admin-outline-variant);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--admin-surface);
+}
+
+.admin-inbox-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--admin-outline-variant);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-inbox-header h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--admin-on-surface);
+}
+
+.admin-message-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.admin-msg-item {
+  display: flex;
+  gap: 12px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--admin-outline-variant);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.admin-msg-item:hover {
+  background-color: var(--admin-surface-container-low);
+}
+
+.admin-msg-item.active {
+  background-color: #eef2ff;
+  border-left: 4px solid var(--admin-primary);
+  padding-left: 16px;
+}
+
+.admin-msg-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.admin-msg-preview {
+  flex: 1;
+  min-width: 0; /* allows text truncation */
+}
+
+.admin-msg-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 4px;
+}
+
+.admin-msg-sender {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--admin-on-surface);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-msg-time {
+  font-size: 0.75rem;
+  color: var(--admin-on-surface-variant);
+}
+
+.admin-msg-subject {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--admin-on-surface);
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-msg-snippet {
+  font-size: 0.8rem;
+  color: var(--admin-on-surface-variant);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-msg-item.unread .admin-msg-sender,
+.admin-msg-item.unread .admin-msg-subject {
+  font-weight: 800;
+}
+.admin-msg-item.unread .admin-msg-time {
+  color: var(--admin-primary);
+  font-weight: 700;
+}
+
+/* Right Panel */
+.admin-reading-pane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.admin-reading-header {
+  padding: 24px;
+  border-bottom: 1px solid var(--admin-outline-variant);
+}
+
+.admin-reading-title h2 {
+  margin: 0 0 16px 0;
+  font-size: 1.3rem;
+  color: var(--admin-on-surface);
+}
+
+.admin-reading-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-reading-sender {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-reading-time {
+  font-size: 0.85rem;
+  color: var(--admin-on-surface-variant);
+}
+
+.admin-reading-body {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  color: var(--admin-on-surface);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.admin-reading-body p {
+  margin-top: 0;
+  margin-bottom: 16px;
+  white-space: pre-line;
+}
+
+.admin-reading-reply {
+  padding: 24px;
+  border-top: 1px solid var(--admin-outline-variant);
+  background-color: var(--admin-surface-container-lowest);
+}
+
+.admin-reading-reply textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--admin-outline-variant);
+  border-radius: 8px;
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  outline: none;
+}
+
+.admin-reading-reply textarea:focus {
+  border-color: var(--admin-primary);
+}
+
+.admin-reply-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--admin-on-surface-variant);
+}

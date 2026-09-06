@@ -1,0 +1,222 @@
+@import './Dashbord.css';
+
+.text-purple { color: #8b5cf6; }
+.text-orange { color: #f97316; }
+
+.reports-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.report-card {
+  background-color: var(--surface);
+  border-radius: 12px;
+  border: 1px solid var(--outline);
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--surface-highest);
+}
+
+.report-header h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.filter-small {
+  color: var(--text-main); /* Force color */
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid var(--outline);
+  background-color: var(--surface-low);
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.chart-container {
+  padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.chart-grid {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  gap: 0.5rem;
+  border-bottom: 2px solid var(--surface-highest);
+  border-left: 2px solid var(--surface-highest);
+  padding-left: 10px;
+  position: relative;
+}
+
+.chart-bar {
+  width: 100%;
+  max-width: 40px;
+  background: var(--primary-container);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transition: height 1s ease-out;
+}
+.chart-bar:hover { filter: brightness(1.1); cursor: pointer; }
+
+.chart-bar span {
+  position: absolute;
+  bottom: -25px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.chart-val {
+  position: absolute;
+  top: -20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--primary);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.chart-bar:hover .chart-val { opacity: 1; }
+
+.report-table {
+  min-width: 600px; /* Force scroll */
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+.report-table th {
+  padding: 1rem;
+  background-color: var(--surface-low);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 700;
+  border-bottom: 1px solid var(--surface-highest);
+}
+.report-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--surface-highest);
+  vertical-align: middle;
+  font-size: 0.875rem;
+}
+.report-table tr:last-child td { border-bottom: none; }
+.report-table tr:hover td { background-color: rgba(0,0,0,0.02); }
+
+.product-info { display: flex; align-items: center; gap: 0.75rem; }
+.product-img-mini {
+  width: 36px;
+  height: 36px;
+  background-color: var(--surface-highest);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+}
+.product-details p { margin: 0; }
+.product-name { font-weight: 700; color: var(--text-main); }
+.product-cat { font-size: 0.7rem; color: var(--text-muted); }
+
+.summary-list {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.summary-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+.summary-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+@media print {
+  .sidebar, 
+  .topbar, 
+  .primary-btn, 
+  .filter-small,
+  .search-wrapper,
+  .topbar-actions {
+    display: none !important;
+  }
+  
+  .dashboard-container {
+    display: block !important;
+  }
+  
+  .main-content {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .reports-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .report-card, .metric-card {
+    break-inside: avoid;
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  body {
+    background-color: white !important;
+  }
+}
+
+/* Responsive Mobile Layout */
+@media (max-width: 1024px) {
+  .reports-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.report-table-wrapper {
+  overflow-x: auto;
+  width: 100%;
+}

@@ -1,0 +1,138 @@
+@import './AdminInventory.css';
+
+.admin-notifications-board {
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid var(--admin-outline-variant);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  margin-top: 24px;
+  overflow: hidden;
+}
+
+.admin-notif-header {
+  padding: 24px;
+  border-bottom: 1px solid var(--admin-outline-variant);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--admin-surface-container-lowest);
+}
+
+.admin-notif-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--admin-on-surface);
+}
+
+.admin-mark-read-btn {
+  background: none;
+  border: none;
+  color: var(--admin-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.admin-mark-read-btn:hover {
+  background-color: var(--admin-surface-container-low);
+}
+
+.admin-notif-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-notif-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--admin-outline-variant);
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.admin-notif-item:last-child {
+  border-bottom: none;
+}
+
+.admin-notif-item.unread {
+  background-color: #f8fafc;
+}
+
+.admin-notif-item.unread:hover {
+  background-color: #f1f5f9;
+}
+
+.admin-notif-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Icon specific colors */
+.admin-notif-icon.warning {
+  background-color: #fef08a;
+  color: #a16207;
+}
+.admin-notif-icon.info {
+  background-color: #e0e7ff;
+  color: #4338ca;
+}
+.admin-notif-icon.success {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+.admin-notif-icon.error {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.admin-notif-content {
+  flex: 1;
+}
+
+.admin-notif-title {
+  margin: 0 0 6px 0;
+  font-size: 1.05rem;
+  color: var(--admin-on-surface);
+  font-weight: 500;
+}
+
+.admin-notif-item.unread .admin-notif-title {
+  font-weight: 700;
+}
+
+.admin-notif-desc {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--admin-on-surface-variant);
+  line-height: 1.5;
+}
+
+.admin-notif-time {
+  font-size: 0.85rem;
+  color: var(--admin-on-surface-variant);
+  white-space: nowrap;
+}
+
+.admin-unread-dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--admin-primary);
+  border-radius: 50%;
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
