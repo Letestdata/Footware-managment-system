@@ -58,7 +58,7 @@ A full-featured Point of Sale (POS) and inventory management system for a footwe
 
 - ? **Web Browser** (Chrome, Edge, Safari)
 - ? **Android** (via Capacitor + Android Studio)
-- ? **iOS** (via Capacitor + Xcode — requires macOS)
+- ? **iOS** (via Capacitor + Xcode â€” requires macOS)
 
 ---
 
@@ -265,15 +265,15 @@ service cloud.firestore {
 ```
 nice-footware-system/
 +-- src/
-¦   +-- Login/          # Login page
-¦   +-- admin/          # Admin panel screens
-¦   ¦   +-- css/        # Admin-specific CSS
-¦   +-- employee/       # Employee panel screens
-¦   +-- components/     # Shared reusable components
-¦   +-- css/            # Shared CSS (themes, layouts)
-¦   +-- firebase.js     # Firebase initialization
-¦   +-- App.jsx         # Root app with routing
-¦   +-- main.jsx        # App entry point
+Â¦   +-- Login/          # Login page
+Â¦   +-- admin/          # Admin panel screens
+Â¦   Â¦   +-- css/        # Admin-specific CSS
+Â¦   +-- employee/       # Employee panel screens
+Â¦   +-- components/     # Shared reusable components
+Â¦   +-- css/            # Shared CSS (themes, layouts)
+Â¦   +-- firebase.js     # Firebase initialization
+Â¦   +-- App.jsx         # Root app with routing
+Â¦   +-- main.jsx        # App entry point
 +-- android/            # Capacitor Android project
 +-- ios/                # Capacitor iOS project
 +-- public/             # Static assets
