@@ -170,9 +170,9 @@ Stores all employee and admin login accounts.
 
 | Field Name | Data Type | Required | Description |
 |-----------|-----------|----------|-------------|
-| `username` | string | YES | Unique login username (e.g., "ahmad123") |
+| `username` | string | YES | Unique login username (e.g., "123") |
 | `password` | string | YES | Login password |
-| `name` | string | YES | Full display name (e.g., "Ahmad Ali") |
+| `name` | string | YES | Full display name (e.g., "ABC") |
 | `role` | string | YES | Must be "admin" or "employee" |
 | `email` | string | YES | User email address |
 | `phone` | string | NO | Contact phone number |
